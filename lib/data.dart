@@ -1,4 +1,10 @@
+import 'dart:html';
+
 abstract class Data{
+
+  File file;
+  Data(this.file);
+
   void load(String fileName);
   void save(String fileName);
   void clear();
