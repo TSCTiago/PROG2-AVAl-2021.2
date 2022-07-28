@@ -1,10 +1,12 @@
-//import 'dart:io';
+import 'dart:io';
 
-//import 'package:___force/json_data.dart';
+import 'package:prog2/json_data.dart';
+
+
 
 
 void main() {
-  print('hello');
-  /*JsonData jsonfile = JsonData();
-  jsonfile.load('../files/example.json');*/
+ // print('hello');
+  JsonData jsonfile = JsonData();
+  jsonfile.load('files/example.json');
 }
