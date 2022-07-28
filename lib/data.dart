@@ -1,12 +1,12 @@
-import 'dart:html';
+/*import 'dart:io';
 
 abstract class Data{
-  File file;
-  Data(this.file);
+  //File file;
+  //Data(this.file);
 
-  void load(String fileName)=>file  ;
+  void load(String fileName);
   
-  void save(String fileName);
+ /* void save(String fileName);
   void clear();
   
   bool get hasData;
@@ -14,6 +14,6 @@ abstract class Data{
   String get data;
   //String set data();
 
-  List<String> fields();
+  List<String> fields();*/
 
-}
+}*/

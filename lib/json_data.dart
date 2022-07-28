@@ -1,12 +1,12 @@
-import 'dart:io';
+/*import 'dart:io';
 
 import './data.dart';
 
 class JsonData implements Data{
-
   @override
   void load(String jsonfile){
-    print(jsonfile.readAsStringSync());
-  };
+   final file = File(jsonfile).readAsStringSync();
+   print(file);
+  }
 
-}
+}*/
