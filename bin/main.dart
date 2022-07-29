@@ -1,6 +1,6 @@
-import 'dart:io';
+// import 'dart:io';
 
-import 'package:prog2/json_data.dart';
+import '../lib/json_data.dart';
 
 void main() {
   JsonData jsonfile = JsonData();
