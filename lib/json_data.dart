@@ -20,8 +20,7 @@ class JsonData implements Data {
 
   @override
   String get data => jsonData ?? '';
-
-  @override
+  
   set data(value) {
       jsonData = value;
  
