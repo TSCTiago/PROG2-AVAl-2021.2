@@ -1,19 +1,10 @@
 abstract class Data{
- 
-  //Data(this.file);
-
   void load(String fileName);
-
+  List<String> get fields;
   bool get hasData;
-  String get data;
-  void set data(String fileName);
- /* void save(String fileName);
-  void clear();
-  
- 
-
-
-
-  List<String> fields();*/
+  //void save;
+ // String get data;
+  //set data;
+  //void clear;
 
 }

@@ -1,27 +1,26 @@
-import 'dart:io';
 import 'dart:convert';
-import './data.dart';
+import 'dart:io';
+
+import 'data.dart';
 
 class JsonData implements Data {
-  //List<String> file = [];
-  Map<String, dynamic> file = Map<String, dynamic>();
+  dynamic data;
 
-  @override
-  String get data {
-    return jsonEncode(file);
   
-  }
-
-  @override
-  void set data(String fileName) {
-      file = jsonDecode(fileName);
-  }
-
   @override
   void load(jsonfile) {
     jsonfile = File(jsonfile).readAsStringSync();
+    data = jsonDecode(jsonfile);
+  
   }
 
+
   @override
-  bool get hasData => file.isEmpty;
+  List<String> get fields => data[0].keys.toList();
+  
+
+  @override
+  bool get hasData => data.isEmpty;
+
+
 }
