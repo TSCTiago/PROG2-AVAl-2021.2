@@ -14,7 +14,6 @@ void main() {
   ///jsonfile.save('./files/example.json');
   //print(jsonfile.data);
 
-
   // READ FILE CSV
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
