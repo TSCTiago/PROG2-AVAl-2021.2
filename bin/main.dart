@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:prog2/csv_data.dart';
+import 'package:prog2/tsv_data.dart';
 import 'package:prog2/json_data.dart';
+import 'package:prog2/xml_data.dart';
 
 void main() {
   //READ FILE JSON
@@ -26,6 +28,11 @@ void main() {
   //print(csvfile.data);
   //csvfile.clear();
   ///print('csvfile.data');
+
+  TSVData tsvfile = TSVData();
+  tsvfile.load('./files/another_example.tsv');
+  print(tsvfile.fields);
+
   print(
       "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
 }
