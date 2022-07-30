@@ -19,19 +19,23 @@ void main() {
   // READ FILE CSV
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
-  print(csvfile.fields);
+  //print(csvfile.fields);
   //print(csvfile.data);
   //print(csvfile.hasData);
   //print(csvfile.separator);
   //csvfile.clear();
-  csvfile.save('./files/outfiles/exemple.csv');
+  //csvfile.save('./files/outfiles/exemple.csv');
   //print(csvfile.data);
   //csvfile.clear();
   ///print('csvfile.data');
 
   TSVData tsvfile = TSVData();
   tsvfile.load('./files/another_example.tsv');
-  print(tsvfile.fields);
+  //print(tsvfile.fields);
+
+  XMLData xmlfile = XMLData();
+  xmlfile.load('./files/example.xml');
+
 
   print(
       "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");

@@ -25,10 +25,10 @@ class TSVData extends DelimitedData {
       // print(tsv.toMap());
 
       csvList1 = const CsvToListConverter().convert(out, eol: '\n');
-      print(csvList1);
+     // print(csvList1);
       final csvList = const CsvToListConverter().convert(out, eol: '\n');
       fieldTSV = csvList[0].map((e) => e.toString()).toList();
-      print(fieldTSV);
+     // print(fieldTSV);
     }
 
     tsvRead();
