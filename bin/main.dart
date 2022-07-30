@@ -16,6 +16,17 @@ void main() {
   ///jsonfile.save('./files/example.json');
   //print(jsonfile.data);
 
+
+  // READ FILE XML
+  XMLData xmlfile = XMLData();
+  final filexml = File('files/example.xml');
+  //xmlfile.load('./files/example.xml');
+  //print(xmlfile.hasData);
+  //print(xmlfile.fields);
+  //print(xmlfile.data);
+  //xmlfile.clear();
+
+
   // READ FILE CSV
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
@@ -29,6 +40,7 @@ void main() {
   //csvfile.clear();
   ///print('csvfile.data');
 
+  // READ FILE TSV
   TSVData tsvfile = TSVData();
   tsvfile.load('./files/another_example.tsv');
   print(tsvfile.fields);
