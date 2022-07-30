@@ -32,7 +32,7 @@ class CSVData extends DelimitedData {
   }
 
   @override
-  String get data => csvList1.toString().replaceAll(('['), '').replaceAll(']', '');
+  String get data => csvList1.toString();
   set data(value) {
      csvList1 = value as List;
   }
@@ -43,6 +43,5 @@ class CSVData extends DelimitedData {
 
   @override
   bool get hasData => !csvList1.isEmpty;
-
 
 }
