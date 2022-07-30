@@ -1,12 +1,28 @@
-// import 'dart:io';
-
-import '../lib/json_data.dart';
+import 'dart:io';
+import 'package:prog2/csv_data.dart';
+import 'package:prog2/json_data.dart';
 
 void main() {
+  //READ FILE JSON
   JSONData jsonfile = JSONData();
   jsonfile.load('./files/example.json');
+  //print(jsonfile.hasData);
+  //print(jsonfile.fields);
+  //print(jsonfile.data);
+  //jsonfile.clear();
+  //print(jsonfile.data);
+  ///jsonfile.save('./files/example.json');
+  //print(jsonfile.data);
 
-  print(jsonfile.hasData);
-  print(jsonfile.fields);
+
+  // READ FILE CSV
+  CSVData csvfile = CSVData();
+  csvfile.load('./files/example.csv');
+  print(csvfile.fields);
+  print(csvfile.data);
+  print(csvfile.hasData);
+  print(csvfile.separator);
+  csvfile.clear();
+  print('${csvfile.data}');
   
 }

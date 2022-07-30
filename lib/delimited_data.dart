@@ -1,5 +1,5 @@
 import 'data.dart';
 
-abstract class DelimitedData extends Data{
+abstract class DelimitedData implements Data{
   String get separator;
 }
