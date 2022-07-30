@@ -35,7 +35,7 @@ class JSONData implements Data {
 
    @override
    void save(String fileName){
-    File(fileName).writeAsString(
+    File(fileName).writeAsStringSync(
       '''
     [
       {

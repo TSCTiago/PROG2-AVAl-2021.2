@@ -19,10 +19,13 @@ void main() {
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
   print(csvfile.fields);
-  print(csvfile.data);
-  print(csvfile.hasData);
-  print(csvfile.separator);
-  csvfile.clear();
-  print('${csvfile.data}');
+  //print(csvfile.data);
+  //print(csvfile.hasData);
+  //print(csvfile.separator);
+  //csvfile.clear();
+  csvfile.save('./files/example.csv');
+  //print(csvfile.data);
+  //csvfile.clear();
+  ///print('csvfile.data');
   
 }
