@@ -3,7 +3,7 @@
 import '../lib/json_data.dart';
 
 void main() {
-  JsonData jsonfile = JsonData();
+  JSONData jsonfile = JSONData();
   jsonfile.load('./files/example.json');
 
   print(jsonfile.hasData);

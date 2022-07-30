@@ -2,13 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 import 'data.dart';
 
-class JsonData implements Data {
+class JSONData implements Data {
   dynamic jsondata = [];
 
   @override
   void load(jsonfile) {
     jsonfile = File(jsonfile).readAsStringSync();
     jsondata = jsonDecode(jsonfile);
+    
   }
 
   @override
@@ -19,8 +20,8 @@ class JsonData implements Data {
   String get data => jsondata.toString();
   set data(value) {
       jsondata = value;
- 
   }
+
   @override
   bool get hasData => !jsondata.isEmpty;
 
@@ -42,5 +43,4 @@ class JsonData implements Data {
   void clear(){
      jsondata = null;
   }
-
 }
