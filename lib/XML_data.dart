@@ -6,9 +6,10 @@ class XMLData implements Data{
 
   @override
   void load(xmlfile){
-    final document = XmlDocument.parse(xmlfile);
-    final filesxml = document.rootElement.childElements;
-
+    final document = File(xmlfile).readAsStringSync(); 
+    final document1 = XmlDocument.parse(document);
+    final filesxml = document1.rootElement.childElements;
+    
     for (XmlElement row in filesxml){
       Map<String, dynamic> mapRow = {};
       for (XmlElement element in row.childElements){
@@ -40,4 +41,3 @@ class XMLData implements Data{
   // TODO: implement fields
   List<String> get fields => throw UnimplementedError();
 }
-

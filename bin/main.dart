@@ -6,8 +6,8 @@ import 'package:prog2/xml_data.dart';
 
 void main() {
   //READ FILE JSON
-  JSONData jsonfile = JSONData();
-  jsonfile.load('./files/example.json');
+  //JSONData jsonfile = JSONData();
+  //jsonfile.load('./files/example.json');
   //print(jsonfile.hasData);
   //print(jsonfile.fields);
   //print(jsonfile.data);
@@ -19,7 +19,7 @@ void main() {
 
   // READ FILE XML
   XMLData xmlfile = XMLData();
-  final filexml = File('files/example.xml');
+  xmlfile.load('./files/example.xml');
   //xmlfile.load('./files/example.xml');
   //print(xmlfile.hasData);
   //print(xmlfile.fields);
@@ -28,22 +28,22 @@ void main() {
 
 
   // READ FILE CSV
-  CSVData csvfile = CSVData();
-  csvfile.load('./files/example.csv');
-  print(csvfile.fields);
+  //CSVData csvfile = CSVData();
+  //csvfile.load('./files/example.csv');
+  //print(csvfile.fields);
   //print(csvfile.data);
   //print(csvfile.hasData);
   //print(csvfile.separator);
   //csvfile.clear();
-  csvfile.save('./files/outfiles/exemple.csv');
+  //csvfile.save('./files/outfiles/exemple.csv');
   //print(csvfile.data);
   //csvfile.clear();
   ///print('csvfile.data');
 
   // READ FILE TSV
-  TSVData tsvfile = TSVData();
-  tsvfile.load('./files/another_example.tsv');
-  print(tsvfile.fields);
+  //TSVData tsvfile = TSVData();
+  //tsvfile.load('./files/another_example.tsv');
+  //print(tsvfile.fields);
 
   print(
       "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
