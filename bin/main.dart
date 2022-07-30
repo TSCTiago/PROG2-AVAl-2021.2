@@ -22,10 +22,10 @@ void main() {
   //print(csvfile.hasData);
   //print(csvfile.separator);
   //csvfile.clear();
-  csvfile.save('./files/example.csv');
+  csvfile.save('./files/outfiles/exemple.csv');
   //print(csvfile.data);
   //csvfile.clear();
   ///print('csvfile.data');
   print(
-      "\n Integrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
+      "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
 }

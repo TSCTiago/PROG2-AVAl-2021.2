@@ -1,8 +1,22 @@
-<breakfast_menu>
-   <food>
-       <name>Belgian Waffles</name>
-       <price>$5.95</price>
-       <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
-       <calories>650</calories> </food>
-   <food>
-       
+<?xml version="1.0"?>
+<catalog>
+   <book id="bk101">
+      <author>Gambardella</author>
+      <title>XML Developer's Guide</title>
+      <genre>Computer</genre>
+      <price>44.95</price>
+   </book>
+   <book id="bk102">
+      <author>Ralls</author>
+      <title>Midnight Rain</title>
+      <genre>Fantasy</genre>
+      <price>5.95</price>
+   </book>
+   <book>
+      <id>bk103</id>
+      <author>Corets</author>
+      <title>Maeve Ascendant</title>
+      <genre>Fantasy</genre>
+      <price>5.95</price>
+    </book>
+</catalog>
