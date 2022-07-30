@@ -41,4 +41,3 @@ class XMLData implements Data{
   // TODO: implement fields
   List<String> get fields => throw UnimplementedError();
 }
-

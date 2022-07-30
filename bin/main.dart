@@ -6,8 +6,8 @@ import 'package:prog2/xml_data.dart';
 
 void main() {
   //READ FILE JSON
-  JSONData jsonfile = JSONData();
-  jsonfile.load('./files/example.json');
+  //JSONData jsonfile = JSONData();
+  //jsonfile.load('./files/example.json');
   //print(jsonfile.hasData);
   //print(jsonfile.fields);
   //print(jsonfile.data);
@@ -15,6 +15,17 @@ void main() {
   //print(jsonfile.data);
   ///jsonfile.save('./files/example.json');
   //print(jsonfile.data);
+
+
+  // READ FILE XML
+  XMLData xmlfile = XMLData();
+  xmlfile.load('./files/example.xml');
+  //xmlfile.load('./files/example.xml');
+  //print(xmlfile.hasData);
+  //print(xmlfile.fields);
+  //print(xmlfile.data);
+  //xmlfile.clear();
+
 
   // READ FILE CSV
   CSVData csvfile = CSVData();
