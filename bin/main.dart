@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:prog2/csv_data.dart';
 import 'package:prog2/json_data.dart';
+import 'package:prog2/xml_data.dart';
 
 void main() {
   //READ FILE JSON
@@ -28,4 +29,10 @@ void main() {
   ///print('csvfile.data');
   print(
       "\n Integrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
+
+
+  // READ FILE XML
+  XMLData xmlfile = XMLData();
+  final filexml = File('files/example.xml');
+  //xmlfile.load('./files/example.json');
 }
