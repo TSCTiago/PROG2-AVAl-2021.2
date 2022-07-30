@@ -19,6 +19,20 @@
       <author>Corets</author>
       <title>Maeve Ascendant</title>
       <genre>Fantasy</genre>
-      <price>5.95</price>
+      <price>15.95</price>
+    </book>
+    <book>
+     <id>04</id>
+      <author>Augusto</author>
+      <title>Nerver Send</title>
+      <genre>Psicology</genre>
+      <price>29.95</price>
+    </book>
+    <book>
+     <id>05</id>
+      <author>Funny</author>
+      <title>Happy Day!</title>
+      <genre>Comedy</genre>
+      <price>10.30</price>
     </book>
 </catalog>
