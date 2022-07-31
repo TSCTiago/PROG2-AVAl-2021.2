@@ -5,8 +5,8 @@ import 'package:prog2/json_data.dart';
 import 'package:prog2/xml_data.dart';
 
 void main() {
+
   //READ FILE JSON
-  
   print('*'*43);
   print('ÁREA DE ARQUIVO json');
   print('*'*43);

@@ -17,7 +17,7 @@ class CSVData extends DelimitedData {
 
   @override
   void load(csvfile) {
-    if(!csvfile.contains('.csv')) throw FormatException("Formato inválido");
+    if(!csvfile.contains('.csv')) throw FormatException("Invalid Format");
     csvfile = File(csvfile).readAsStringSync();
     data = csvfile;    
   }
