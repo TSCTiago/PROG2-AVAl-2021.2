@@ -26,42 +26,24 @@ class TSVData extends DelimitedData {
 
   @override
   String get data {
+<<<<<<< HEAD
     if (!hasData) return '';
-    String strValues = '';
-    for (int i = 0; i < listofvalues.length; i++) {
-      strValues += (listofvalues[i]
-          .toString()
+=======
           .replaceAll(' ', '\t')
-          .replaceAll('[', '')
-          .replaceAll(']', '')
-          .replaceAll(',', ''));
-
-      strValues += '\n';
-    }
-    return strValues;
-  }
-
-  @override
-  List<String> get fields {
-    return fieldsTSV;
-  }
-
-  @override
-  void save(String fileName) {
-    String strValues = '';
-    for (int i = 0; i < listofvalues.length; i++) {
-      strValues += (listofvalues[i]
-          .toString()
-          .replaceAll(' ', '\t')
-          .replaceAll('[', '')
-          .replaceAll(']', '')
           .replaceAll(',', ''));
       strValues += '\n';
+<<<<<<< HEAD
     }
 
     final outFile = File(fileName);
     outFile.createSync(recursive: true);
     outFile.writeAsStringSync(strValues);
+=======
+      final outFile = File(fileName);
+      outFile.createSync(recursive: true);
+      outFile.writeAsStringSync(strValues);
+    }
+>>>>>>> e65043e8b6d3990b48807a67d12d0b8b229bae4f
   }
 
   @override
