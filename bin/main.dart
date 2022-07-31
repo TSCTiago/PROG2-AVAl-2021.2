@@ -18,7 +18,7 @@ void main() {
   jsonfile.clear();
   print('TEM DADOS: ${jsonfile.hasData}');
   //print(jsonfile.data);
-  jsonfile.save('./files/outfiles/example.json');
+  jsonfile.save('./files/example.json');
   //print(jsonfile.data);
   print('*'*43);
 
@@ -33,7 +33,7 @@ void main() {
   print('CAMPOS: ${xmlfile.fields}');
   print('CONTEÚDO: \n${xmlfile.data}');
   print('==== APOS O CLEAR ====');
-  xmlfile.save('./files/outfiles/example.xml');
+  xmlfile.save('./files/example.xml');
   xmlfile.clear();
   print('CONTEÚDO: \n${xmlfile.data}');
   print('TEM DADOS: ${xmlfile.hasData}');
@@ -50,7 +50,7 @@ void main() {
   print('SEPARADOR:${csvfile.separator}');
   print('TEM DADOS: ${csvfile.hasData}');
   print('DADOS: \n${csvfile.data}');
-  csvfile.save('./files/outfiles/exemple.csv');
+  csvfile.save('./files/exemple.csv');
   csvfile.clear();
   print('DADOS: \n${csvfile.data}');
   print('*'*43);
@@ -67,7 +67,7 @@ void main() {
   //tsvfile.clear();
   print('TEM DADOS: ${tsvfile.hasData}');
   print('DADOS: \n${tsvfile.data}');
-  tsvfile.save('./example.tsv');
+  tsvfile.save('./files/example.tsv');
   print('*'*43);
 
 
