@@ -41,10 +41,10 @@ class TSVData extends DelimitedData {
     for (int i = 0; i < as.length; i++) {
       strValues += (as[i]
           .toString()
-          .replaceAll(' ', '\t')
+          // .replaceAll(' ', '\t')
           .replaceAll('[', '')
           .replaceAll(']', '')
-          .replaceAll(',', ''));
+          .replaceAll(',', '\t'));
 
       strValues += '\n';
     }

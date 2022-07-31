@@ -47,16 +47,16 @@ void main() {
   print('ÁREA DE ARQUIVO XML');
   print('*' * 43);
   TSVData tsvfile = TSVData();
-  tsvfile.load('./files/another_example.tsv');
-  print('SEPARADOR: ${tsvfile.separator}');
-  print('CAMPOS: ${tsvfile.fields}');
-  print('TEM DADOS: ${tsvfile.hasData}');
-  print('DADOS: \n${tsvfile.data}');
+  tsvfile.load('./files/example.tsv');
+  print('Separator: ${tsvfile.separator}');
+  print('Fields: ${tsvfile.fields}');
+  print('Has Data: ${tsvfile.hasData}');
+  print('Data: \n${tsvfile.data}');
   tsvfile.clear();
-  print('TEM DADOS: ${tsvfile.hasData}');
-  print('DADOS: ${tsvfile.data}');
+  print('Has Data: ${tsvfile.hasData}');
+  print('Data: ${tsvfile.data}');
   print('*' * 43);
 
   print(
-      "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
+      "\nStudents: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
 }
