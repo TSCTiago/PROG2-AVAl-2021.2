@@ -7,7 +7,7 @@ import 'package:prog2/xml_data.dart';
 void main() {
   //READ FILE JSON
   //JSONData jsonfile = JSONData();
-  //jsonfile.load('./files/example.json');
+  //jsonfile.load('./files/example.csv');
   //print(jsonfile.hasData);
   //print(jsonfile.fields);
   //print(jsonfile.data);
@@ -18,36 +18,51 @@ void main() {
 
 
   // READ FILE XML
+  /*print('*'*43);
+  print('AREA DE ARQUIVO XML');
+  print('*'*43);
   XMLData xmlfile = XMLData();
   xmlfile.load('./files/example.xml');
-  //xmlfile.load('./files/example.xml');
-  //print(xmlfile.hasData);
-  //print(xmlfile.fields);
-  //print(xmlfile.data);
-  //xmlfile.clear();
+  print('TEM DADOS: ${xmlfile.hasData}');
+  print('CAMPOS: ${xmlfile.fields}');
+  print('CONTEÚDO: \n${xmlfile.data}');
+  print('==== APOS O CLEAR ====');
+  xmlfile.clear();
+  print('CONTEÚDO: \n${xmlfile.data}');
+  print('TEM DADOS: ${xmlfile.hasData}');
 
+  //print('*'*43);
+*/
 
-  // READ FILE CSV
+   //READ FILE CSV
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
-  //print(csvfile.fields);
-  //print(csvfile.data);
-  //print(csvfile.hasData);
-  //print(csvfile.separator);
+  print(csvfile.fields);
+  print(csvfile.data);
+  print(csvfile.hasData);
+  print(csvfile.separator);
   //csvfile.clear();
-  //csvfile.save('./files/outfiles/exemple.csv');
+  csvfile.save('./files/outfiles/exemple.csv');
   //print(csvfile.data);
-  //csvfile.clear();
+  csvfile.clear();
   ///print('csvfile.data');
 
+ /* print('*'*43);
+  print('ÁREA DE ARQUIVO TSV');
+  print('*'*43);
   TSVData tsvfile = TSVData();
-  tsvfile.load('./files/another_example.tsv');
-  //print(tsvfile.fields);
+  tsvfile.load('./files/example.tsv');
+  print('SEPARADOR: ${tsvfile.separator}');
+  print('CAMPOS: ${tsvfile.fields}');
+  print('TEM DADOS: ${tsvfile.hasData}');
+  print('DADOS: \n${tsvfile.data}');
+  //tsvfile.clear();
+  print('TEM DADOS: ${tsvfile.hasData}');
+  print('DADOS: \n${tsvfile.data}');
+  tsvfile.save('./example.tsv');
+  print('*'*43);
 
-  XMLData xmlfile = XMLData();
-  xmlfile.load('./files/example.xml');
-
-
-  print(
-      "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
+*/
+/*  print(
+    "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");*/
 }

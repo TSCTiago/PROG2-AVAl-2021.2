@@ -8,11 +8,9 @@ class JSONData implements Data {
 
   @override
   void load(jsonfile) {
-    try{
+    if(!jsonfile.contains('.json')) throw FormatException("Formato inválido");
     jsonfile = File(jsonfile).readAsStringSync();
-    jsondata = jsonDecode(jsonfile);} on TypeError{
-      throw 'Não foi possível ler';
-    }
+    jsondata = jsonDecode(jsonfile);
     
   }
 
@@ -31,7 +29,7 @@ class JSONData implements Data {
  
   }
   @override
-  bool get hasData => !jsondata.isEmpty;
+  bool get hasData => jsondata.isNotEmpty;
 
    @override
    void save(String fileName){

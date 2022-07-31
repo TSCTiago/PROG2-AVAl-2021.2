@@ -1,60 +1,77 @@
 import 'dart:io';
-import 'package:csv/csv.dart';
-import 'package:grizzly_io/io_loader.dart';
 import 'package:prog2/delimited_data.dart';
 
 class TSVData extends DelimitedData {
-  dynamic csvList1 = [];
-  List<String> fieldTSV = [];
+  List<String> fieldsTSV = [];
+  dynamic listofvalues = [];
+
 
   @override
-  String get separator => '\t';
+  String get separator => '"\t"';
 
-  @override
-  List<String> get fields => fieldTSV;
 
   @override
   void load(tsvfile) {
-    Future<void> tsvRead() async {
-      Table tsv = await readLTsv(tsvfile);
-      // print(tsv);
-      final out = encodeCsv(tsv.toList(), fieldSep: '\t');
-      // print(out);
-      tsv = parseLTsv(out);
-      // print(tsv);
-      // print(tsv.toMap());
-
-      csvList1 = const CsvToListConverter().convert(out, eol: '\n');
-     // print(csvList1);
-      final csvList = const CsvToListConverter().convert(out, eol: '\n');
-      fieldTSV = csvList[0].map((e) => e.toString()).toList();
-     // print(fieldTSV);
-    }
-
-    tsvRead();
+    tsvfile = File(tsvfile).readAsStringSync();
+    data = tsvfile;
   }
+
+
+  set data(String data){
+     final values = data.split('\n');
+    for (var value in values) {
+      listofvalues.add(value.split('\t'));
+    }
+    fieldsTSV = listofvalues[0];
+  }
+
+  
+  @override
+  String get data{
+    String strValues = '';
+    for (int i = 0; i < listofvalues.length; i++) {
+      strValues += (listofvalues[i]
+          .toString()
+          .replaceAll(' ', '\t')
+          .replaceAll('[', '')
+          .replaceAll(']', '')
+          .replaceAll(',', ''));
+
+      strValues += '\n';
+    }
+    return strValues;
+  }
+
+
+  @override
+  List<String> get fields {
+    return fieldsTSV;
+  }
+
 
   @override
   void save(String fileName) {
-    // String csv = const ListToCsvConverter()
-    //     .convert(csvList1, textDelimiter: '', eol: '\n');
-    // //final inFile = csvList1;
-    // final outFile = File(fileName);
-    // outFile.createSync(recursive: true);
-    // outFile.writeAsStringSync(csv);
-  }
+    String strValues = '';
+    for (int i = 0; i < listofvalues.length; i++) {
+      strValues += (listofvalues[i]
+          .toString()
+          .replaceAll(' ', '\t')
+          .replaceAll('[', '')
+          .replaceAll(']', '')
+          .replaceAll(',', ''));
+      strValues += '\n';
+    final outFile = File(fileName);
+    outFile.createSync(recursive: true);
+    outFile.writeAsStringSync(strValues);
+    }}
 
-  @override
-  String get data => csvList1.toString();
-  set data(value) {
-    csvList1 = value as List;
-  }
 
   @override
   void clear() {
-    csvList1 = "";
+    listofvalues = "";
   }
 
+
   @override
-  bool get hasData => !csvList1.isEmpty;
+  bool get hasData => listofvalues.isNotEmpty;
 }
