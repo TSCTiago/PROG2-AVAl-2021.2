@@ -8,5 +8,20 @@
     "name": "Hermione Granger",
     "species": "human",
     "house": "Gryffindor"
+  },
+  {
+    "name": "Dobby",
+    "species": "elf",
+    "house": "not defined"
+  },
+  {
+    "name": "Draco Malfoy",
+    "species": "human",
+    "house": "Slytherin"
+  },
+  {
+    "name": "Cedrico Diggory",
+    "species": "human",
+    "house": "Hufflepuff"
   }
 ]

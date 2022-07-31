@@ -1,2 +1,2 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Program made by: Edilson Morais Brito, Francisco Mendes Magalhães Filho and Tiago da Silva Carvalho.
+

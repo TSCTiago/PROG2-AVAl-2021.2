@@ -16,7 +16,6 @@ void main() {
   ///jsonfile.save('./files/example.json');
   //print(jsonfile.data);
 
-
   // READ FILE XML
   /*print('*'*43);
   print('AREA DE ARQUIVO XML');
