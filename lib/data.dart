@@ -9,5 +9,7 @@ abstract class Data {
 
   String get data;
 
+  set data(String filename);
+  
   void clear();
 }

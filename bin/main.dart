@@ -6,18 +6,25 @@ import 'package:prog2/xml_data.dart';
 
 void main() {
   //READ FILE JSON
-  //JSONData jsonfile = JSONData();
-  //jsonfile.load('./files/example.csv');
-  //print(jsonfile.hasData);
-  //print(jsonfile.fields);
+  
+  print('*'*43);
+  print('ÁREA DE ARQUIVO json');
+  print('*'*43);
+  JSONData jsonfile = JSONData();
+  jsonfile.load('./files/example.json');
+  print('CAMPOS: ${jsonfile.fields}');
+  print('TEM DADOS: ${jsonfile.hasData}');
+  print('DADOS: \n${jsonfile.data}');
+  jsonfile.clear();
+  print('TEM DADOS: ${jsonfile.hasData}');
   //print(jsonfile.data);
-  //jsonfile.clear();
+  jsonfile.save('./files/outfiles/example.json');
   //print(jsonfile.data);
-  ///jsonfile.save('./files/example.json');
-  //print(jsonfile.data);
+  print('*'*43);
+
 
   // READ FILE XML
-  /*print('*'*43);
+  print('*'*43);
   print('AREA DE ARQUIVO XML');
   print('*'*43);
   XMLData xmlfile = XMLData();
@@ -26,27 +33,29 @@ void main() {
   print('CAMPOS: ${xmlfile.fields}');
   print('CONTEÚDO: \n${xmlfile.data}');
   print('==== APOS O CLEAR ====');
+  xmlfile.save('./files/outfiles/example.xml');
   xmlfile.clear();
   print('CONTEÚDO: \n${xmlfile.data}');
   print('TEM DADOS: ${xmlfile.hasData}');
 
   //print('*'*43);
-*/
 
    //READ FILE CSV
+  print('*'*43);
+  print('ÁREA DE ARQUIVO TSV');
+  print('*'*43);
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
-  print(csvfile.fields);
-  print(csvfile.data);
-  print(csvfile.hasData);
-  print(csvfile.separator);
-  //csvfile.clear();
+  print('CAMPOS: ${csvfile.fields}');
+  print('SEPARADOR:${csvfile.separator}');
+  print('TEM DADOS: ${csvfile.hasData}');
+  print('DADOS: \n${csvfile.data}');
   csvfile.save('./files/outfiles/exemple.csv');
-  //print(csvfile.data);
   csvfile.clear();
-  ///print('csvfile.data');
+  print('DADOS: \n${csvfile.data}');
+  print('*'*43);
 
- /* print('*'*43);
+  print('*'*43);
   print('ÁREA DE ARQUIVO TSV');
   print('*'*43);
   TSVData tsvfile = TSVData();
@@ -61,7 +70,7 @@ void main() {
   tsvfile.save('./example.tsv');
   print('*'*43);
 
-*/
-/*  print(
-    "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");*/
+
+  print(
+    "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
 }

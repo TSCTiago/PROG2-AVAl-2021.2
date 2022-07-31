@@ -1,52 +1,52 @@
 import 'dart:convert';
 import 'dart:io';
 import 'data.dart';
-import 'exceptions/custom_exception.dart';
 
 class JSONData implements Data {
   dynamic jsondata = [];
+  String contentJson = '';
+  String contenttoSave = '';
 
   @override
   void load(jsonfile) {
     if(!jsonfile.contains('.json')) throw FormatException("Formato inválido");
     jsonfile = File(jsonfile).readAsStringSync();
-    jsondata = jsonDecode(jsonfile);
-    
+    contenttoSave = jsonfile;
+    data = jsonfile;
   }
 
   @override
   List<String> get fields => jsondata[0].keys.toList();
 
-  
   @override
-  String get data => jsondata.toString();
-  set data(value) {
-      try{
-      jsondata = value;
-    } on TypeError {
-      throw CustomException(message: 'Erro de tipo');
-    }
- 
+  set data(String data) {
+    jsondata = jsonDecode(data);
+    contentJson = jsondata.toString();
   }
+
+  @override
+  String get data {
+    if (!hasData) return '';
+    String strValues = '';
+    for (int i = 0; i < jsondata.length; i++) {
+      strValues += (jsondata[i]).toString();
+      strValues += '\n';
+    }
+    return strValues;
+  }
+
   @override
   bool get hasData => jsondata.isNotEmpty;
 
-   @override
-   void save(String fileName){
-    File(fileName).writeAsStringSync(
-      '''
-    [
-      {
-      "name": "Rony Weslley",
-      "species": "human",
-      "house": "Gryffindor"
-      }
-    ]
-    ''',
-    );
-  }
   @override
-  void clear(){
-     jsondata = null;
+  void save(String fileName) {
+    final outFile = File(fileName);
+    outFile.createSync(recursive: true);
+    outFile.writeAsStringSync(contenttoSave);
+  }
+
+  @override
+  void clear() {
+    jsondata = "";
   }
 }

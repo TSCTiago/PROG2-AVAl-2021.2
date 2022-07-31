@@ -5,29 +5,28 @@ class TSVData extends DelimitedData {
   List<String> fieldsTSV = [];
   dynamic listofvalues = [];
 
-
   @override
   String get separator => '"\t"';
 
-
   @override
   void load(tsvfile) {
+    if(!tsvfile.contains('.tsv')) throw FormatException("Formato inválido");
     tsvfile = File(tsvfile).readAsStringSync();
     data = tsvfile;
   }
 
-
-  set data(String data){
-     final values = data.split('\n');
+  @override
+  set data(String data) {
+    final values = data.split('\n');
     for (var value in values) {
       listofvalues.add(value.split('\t'));
     }
     fieldsTSV = listofvalues[0];
   }
 
-  
   @override
-  String get data{
+  String get data {
+    if (!hasData) return '';
     String strValues = '';
     for (int i = 0; i < listofvalues.length; i++) {
       strValues += (listofvalues[i]
@@ -42,12 +41,10 @@ class TSVData extends DelimitedData {
     return strValues;
   }
 
-
   @override
   List<String> get fields {
     return fieldsTSV;
   }
-
 
   @override
   void save(String fileName) {
@@ -60,17 +57,17 @@ class TSVData extends DelimitedData {
           .replaceAll(']', '')
           .replaceAll(',', ''));
       strValues += '\n';
+    }
+
     final outFile = File(fileName);
     outFile.createSync(recursive: true);
     outFile.writeAsStringSync(strValues);
-    }}
-
+  }
 
   @override
   void clear() {
     listofvalues = "";
   }
-
 
   @override
   bool get hasData => listofvalues.isNotEmpty;
