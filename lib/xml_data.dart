@@ -9,7 +9,7 @@ class XMLData implements Data {
   String contentXml = '';
   @override
   void load(xmlfile) {
-    if(!xmlfile.contains('.xml')) throw FormatException("Formato inválido");
+    if(!xmlfile.contains('.xml')) throw FormatException("Invalid Format");
     final document = File(xmlfile).readAsStringSync();
     contentXml = document;
     data = document;

@@ -9,7 +9,7 @@ class JSONData implements Data {
 
   @override
   void load(jsonfile) {
-    if(!jsonfile.contains('.json')) throw FormatException("Formato inválido");
+    if(!jsonfile.contains('.json')) throw FormatException("Invalid Format");
     jsonfile = File(jsonfile).readAsStringSync();
     contenttoSave = jsonfile;
     data = jsonfile;

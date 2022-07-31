@@ -10,7 +10,7 @@ class TSVData extends DelimitedData {
 
   @override
   void load(tsvfile) {
-    if(!tsvfile.contains('.tsv')) throw FormatException("Formato inválido");
+    if(!tsvfile.contains('.tsv')) throw FormatException("Invalid Format");
     tsvfile = File(tsvfile).readAsStringSync();
     data = tsvfile;
   }
