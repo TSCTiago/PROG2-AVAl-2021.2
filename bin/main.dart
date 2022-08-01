@@ -19,7 +19,7 @@ void main() {
   //print after clear
   print('HAS DATA: ${jsonfile.hasData}');
   //print(jsonfile.data);
-  jsonfile.save('./files/outfiles/example.json');
+  jsonfile.save('./files/example.json');
   //print(jsonfile.data);
   print('-'*50);
   print('');
@@ -37,7 +37,7 @@ void main() {
   //print after clear
   print('HAS DATA: ${xmlfile.hasData}');
   //print(xmlfile.data);
-  xmlfile.save('./files/outfiles/example.xml');
+  xmlfile.save('./files/example.xml');
   //print(xmlfile.data);
   print('-'*50);
 
