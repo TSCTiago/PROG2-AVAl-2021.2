@@ -15,14 +15,15 @@ void main() {
   print('Fields: ${jsonfile.fields}');
   print('Has data: ${jsonfile.hasData}');
   print('Data: \n${jsonfile.data}');
+  //print(jsonfile.data);
+  jsonfile.save('./files/example.json');
   jsonfile.clear();
   //print after clear
   print('HAS DATA: ${jsonfile.hasData}');
   //print(jsonfile.data);
-  jsonfile.save('./files/example.json');
-  //print(jsonfile.data);
   print('-'*50);
   print('');
+
 
   //READ FILE XML
   print('-'*50);
@@ -33,46 +34,51 @@ void main() {
   print('Fields: ${xmlfile.fields}');
   print('Has data: ${xmlfile.hasData}');
   print('Data: \n${xmlfile.data}');
+  //print(xmlfile.data);
+  xmlfile.save('./files/example.xml');
   xmlfile.clear();
   //print after clear
   print('HAS DATA: ${xmlfile.hasData}');
   //print(xmlfile.data);
-  xmlfile.save('./files/example.xml');
-  //print(xmlfile.data);
   print('-'*50);
+  print('');
 
-
-   //READ FILE CSV
-  print('*'*43);
-  print('ÁREA DE ARQUIVO TSV');
-  print('*'*43);
+  //READ FILE CSV
+  print('-'*50);
+  print('CSV File Area');
+  print('-'*50);
   CSVData csvfile = CSVData();
   csvfile.load('./files/example.csv');
-  print('CAMPOS: ${csvfile.fields}');
-  print('SEPARADOR:${csvfile.separator}');
-  print('TEM DADOS: ${csvfile.hasData}');
-  print('DADOS: \n${csvfile.data}');
-  csvfile.save('./files/outfiles/exemple.csv');
+  print('Fields: ${csvfile.fields}');
+  print('Has data: ${csvfile.hasData}');
+  print('Data: \n${csvfile.data}');
+  //print(csvfile.data);
+  csvfile.save('./files/example.csv');
   csvfile.clear();
-  print('DADOS: \n${csvfile.data}');
-  print('*'*43);
+  //print after clear
+  print('HAS DATA: ${csvfile.hasData}');
+  //print(csvfile.data);
+  print('-'*50);
+  print('');
 
-  print('*'*43);
-  print('ÁREA DE ARQUIVO TSV');
-  print('*'*43);
+
+  //READ FILE TSV
+  print('-'*50);
+  print('TSV File Area');
+  print('-'*50);
   TSVData tsvfile = TSVData();
   tsvfile.load('./files/example.tsv');
-  print('SEPARADOR: ${tsvfile.separator}');
-  print('CAMPOS: ${tsvfile.fields}');
-  print('TEM DADOS: ${tsvfile.hasData}');
-  print('DADOS: \n${tsvfile.data}');
-  //tsvfile.clear();
-  print('TEM DADOS: ${tsvfile.hasData}');
-  print('DADOS: \n${tsvfile.data}');
-  tsvfile.save('./example.tsv');
-  print('*'*43);
+  print('Fields: ${tsvfile.fields}');
+  print('Has data: ${tsvfile.hasData}');
+  print('Data: \n${tsvfile.data}');
+  //print(tsvfile.data);
+  tsvfile.save('./files/example.tsv');
+  tsvfile.clear();
+  //print after clear
+  print('HAS DATA: ${tsvfile.hasData}');
+  //print(tsvfile.data);
+  print('-'*50);
+  print('');
 
-
-  print(
-    "\nIntegrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
+  print("Integrantes do Grupo: Edilson Morais Brito, Francisco Mendes Magalhães Filho, Tiago da Silva Carvaho");
 }
