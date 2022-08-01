@@ -7,38 +7,40 @@ import 'package:prog2/xml_data.dart';
 void main() {
 
   //READ FILE JSON
-  print('*'*43);
-  print('ÁREA DE ARQUIVO json');
-  print('*'*43);
+  print('-'*50);
+  print('JSON File Area');
+  print('-'*50);
   JSONData jsonfile = JSONData();
   jsonfile.load('./files/example.json');
-  print('CAMPOS: ${jsonfile.fields}');
-  print('TEM DADOS: ${jsonfile.hasData}');
-  print('DADOS: \n${jsonfile.data}');
+  print('Fields: ${jsonfile.fields}');
+  print('Has data: ${jsonfile.hasData}');
+  print('Data: \n${jsonfile.data}');
   jsonfile.clear();
-  print('TEM DADOS: ${jsonfile.hasData}');
+  //print after clear
+  print('HAS DATA: ${jsonfile.hasData}');
   //print(jsonfile.data);
   jsonfile.save('./files/outfiles/example.json');
   //print(jsonfile.data);
-  print('*'*43);
+  print('-'*50);
+  print('');
 
-
-  // READ FILE XML
-  print('*'*43);
-  print('AREA DE ARQUIVO XML');
-  print('*'*43);
+  //READ FILE XML
+  print('-'*50);
+  print('XML File Area');
+  print('-'*50);
   XMLData xmlfile = XMLData();
   xmlfile.load('./files/example.xml');
-  print('TEM DADOS: ${xmlfile.hasData}');
-  print('CAMPOS: ${xmlfile.fields}');
-  print('CONTEÚDO: \n${xmlfile.data}');
-  print('==== APOS O CLEAR ====');
-  xmlfile.save('./files/outfiles/example.xml');
+  print('Fields: ${xmlfile.fields}');
+  print('Has data: ${xmlfile.hasData}');
+  print('Data: \n${xmlfile.data}');
   xmlfile.clear();
-  print('CONTEÚDO: \n${xmlfile.data}');
-  print('TEM DADOS: ${xmlfile.hasData}');
+  //print after clear
+  print('HAS DATA: ${xmlfile.hasData}');
+  //print(xmlfile.data);
+  xmlfile.save('./files/outfiles/example.xml');
+  //print(xmlfile.data);
+  print('-'*50);
 
-  //print('*'*43);
 
    //READ FILE CSV
   print('*'*43);
