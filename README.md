@@ -11,4 +11,4 @@ libraries used in the project <br>
 XML: https://pub.dev/packages/xml <br>
 CSV: https://pub.dev/packages/csv
 
-run dart pub dev.
+run dart pub get.
