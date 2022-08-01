@@ -10,7 +10,7 @@ class TSVData extends DelimitedData {
 
   @override
   void load(tsvfile) {
-    if(!tsvfile.contains('.tsv')) throw FormatException("Invalid Format");
+    if (!tsvfile.contains('.tsv')) throw FormatException("Invalid Format");
     tsvfile = File(tsvfile).readAsStringSync();
     data = tsvfile;
   }
@@ -62,6 +62,7 @@ class TSVData extends DelimitedData {
     final outFile = File(fileName);
     outFile.createSync(recursive: true);
     outFile.writeAsStringSync(strValues);
+    print('Status: Saved successfully');
   }
 
   @override

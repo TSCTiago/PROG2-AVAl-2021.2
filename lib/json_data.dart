@@ -9,7 +9,7 @@ class JSONData implements Data {
 
   @override
   void load(jsonfile) {
-    if(!jsonfile.contains('.json')) throw FormatException("Invalid Format");
+    if (!jsonfile.contains('.json')) throw FormatException("Invalid Format");
     jsonfile = File(jsonfile).readAsStringSync();
     contenttoSave = jsonfile;
     data = jsonfile;
@@ -43,6 +43,7 @@ class JSONData implements Data {
     final outFile = File(fileName);
     outFile.createSync(recursive: true);
     outFile.writeAsStringSync(contenttoSave);
+    print('Status: Saved successfully');
   }
 
   @override

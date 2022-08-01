@@ -8,7 +8,7 @@ class CSVData extends DelimitedData {
 
 
   @override
-  String get separator => ',';
+  String get separator => '","';
 
 
   @override
@@ -53,6 +53,7 @@ class CSVData extends DelimitedData {
     final outFile = File(fileName);
     outFile.createSync(recursive: true);
     outFile.writeAsStringSync(csv);
+    print('Status: Saved successfully');
   }
 
 
